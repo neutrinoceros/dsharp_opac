@@ -38,15 +38,16 @@ jobs:
         #  select: '*musllinux*'
         #  id: musllinux_aarch64
 
+        - os: macos-15-intel
+          archs: x86_64
+          select: '*'
+          id: macos_x86_64
+        - os: macos-latest
+          archs: arm64
+          select: '*'
+          id: macos_arm64
+
         # temporarily deselected because setting up gfortran is its own challenge
-        # - os: macos-15-intel
-        #   archs: x86_64
-        #   select: '*'
-        #   id: macos_x86_64
-        # - os: macos-latest
-        #   archs: arm64
-        #   select: '*'
-        #   id: macos_arm64
         # - os: windows-latest
         #   archs: AMD64
         #   select: '*'
