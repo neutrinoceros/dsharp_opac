@@ -29,6 +29,4 @@ test-command = [
 config-settings = {setup-args = ["--vsenv"], build-dir="build"}
 
 [tool.cibuildwheel.macos]
-before-all = [
-    "brew install gfortran",
-]
+before-build = "bash {project}/wheels/cibw_before_build_macos.sh {project}"
