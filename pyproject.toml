@@ -16,9 +16,9 @@ authors = [
 license = { file = 'LICENSE' }
 requires-python = ">=3.10"
 dependencies = [
-    "numpy>=1.26.0",
+    "numpy>=2.1.0",
     "scipy>=1.13.0",
-    "matplotlib>=3.9.0",
+    "matplotlib>=3.8.0",
     "astropy>=7.0.0",
 
     # only need mpmath.findroot, which I suspect scipy.optimize.fsolve can replace
