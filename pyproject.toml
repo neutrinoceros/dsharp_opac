@@ -11,7 +11,19 @@ authors = [
     { name = "Til Birnstiel & DSHARP collaboration", email = "til.birnstiel@lmu.de" },
 ]
 license = { file = 'LICENSE' }
+requires-python = ">=3.10"
 dependencies = ['numpy', 'scipy', 'matplotlib', 'astropy', 'mpmath', 'setuptools']
 
 [project.urls]
 Repository = "https://github.com/birnstiel/dsharp_opac/"
+
+[tool.cibuildwheel]
+skip = ["cp314t-*"]
+build-verbosity = 1
+test-command = [
+    "python -c 'import dsharp_opac'",
+]
+
+[tool.cibuildwheel.windows]
+# adapted from numpy
+config-settings = {setup-args = ["--vsenv"], build-dir="build"}
