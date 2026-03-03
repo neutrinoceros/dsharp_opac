@@ -1,8 +1,2 @@
-setuptools
-numpy
-numba
-scipy
-matplotlib
-astropy
-ipython
-mpmath
+.[jit]
+ipython>=8.0.0
