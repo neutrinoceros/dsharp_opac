@@ -10,7 +10,6 @@ import numpy as np
 import os
 import sys
 import warnings
-import importlib
 from contextlib import contextmanager
 import socket
 from importlib.resources import files
